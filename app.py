@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify
 from transformers import pipeline
-from pyngrok import ngrok
-import os
 
 # Inicializamos el modelo de Hugging Face para clasificación de emociones
 emotion_model = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
@@ -35,5 +33,4 @@ def analizar_emocion():
     })
 
 if __name__ == '__main__':
-    # Configuramos el puerto
-    app.run(port=5000)
+    app.run(debug=True)
