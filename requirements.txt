@@ -1,0 +1,4 @@
+flask
+transformers
+pyngrok
+gunicorn
